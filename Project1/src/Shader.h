@@ -24,8 +24,10 @@ public:
 	
 	//Set uniforms
 	void SetUniforms4f(const std::string& Name, float v0, float v1, float v2, float v3);
+	void SetUniforms1f(const std::string& Name, float value);
+	void SetUniforms1i(const std::string& Name, int value);
 private:
-	unsigned int GetUniformLocation(const std::string& name);
+	int GetUniformLocation(const std::string& name);
 
 	ShaderProgramSource PraseShader(const std::string& filepath);
 	unsigned int CreateShader(const std::string& vertexShader, const std::string& fragmentShader);
