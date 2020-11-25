@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
 #include <unordered_map>
+#include "glm/glm.hpp"
 
 struct ShaderProgramSource
 {
@@ -26,6 +27,8 @@ public:
 	void SetUniforms4f(const std::string& Name, float v0, float v1, float v2, float v3);
 	void SetUniforms1f(const std::string& Name, float value);
 	void SetUniforms1i(const std::string& Name, int value);
+	void SetUniformMat4f(const std::string& Name, const glm::mat4& matrix);
+	
 private:
 	int GetUniformLocation(const std::string& name);
 
